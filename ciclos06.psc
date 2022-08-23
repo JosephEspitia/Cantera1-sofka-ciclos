@@ -14,7 +14,9 @@ Proceso ciclos06
 	Definir opcCas Como Entero;
 	Definir busq Como Caracter;
 	Definir del Como Entero;
-	Definir nTem Como Entero;
+	Definir nTem1 Como Entero;
+	Definir nTem2 Como Entero;
+	Definir nTem3 Como Entero;
 	
 	on<-Verdadero;
 	c1Name<-"";
@@ -50,11 +52,11 @@ Proceso ciclos06
 						Escribir "Escriba el nombre del nuevo contacto";
 						Leer c1Name;
 						Escribir "Escriba el telefono del nuevo contacto";
-						Leer nTem;
+						Leer nTem1;
 						Escribir "Escriba la organización del nuevo contacto";
 						Leer c1Org;
-						Si nTem <> c1Tel y nTem <> c2Tel y nTem <> c3Tel Entonces
-							c1Tel <- nTem;
+						Si nTem1 <> c1Tel y nTem1 <> c2Tel y nTem1 <> c3Tel Entonces
+							c1Tel <- nTem1;
 						SiNo
 							Escribir "No se guardado el número dado que ya existe";
 							c1Name<-"";
@@ -65,11 +67,11 @@ Proceso ciclos06
 						Escribir "Escriba el nombre del nuevo contacto";
 						Leer c2Name;
 						Escribir "Escriba el telefono del nuevo contacto";
-						Leer nTem;
+						Leer nTem2;
 						Escribir "Escriba la organización del nuevo contacto";
 						Leer c2Org;
-						Si nTem <> c1Tel y nTem <> c2Tel y nTem <> c3Tel Entonces
-							c2Tel <- nTem;
+						Si nTem2 <> c1Tel y nTem2 <> c2Tel y nTem2 <> c3Tel Entonces
+							c2Tel <- nTem2;
 						SiNo
 							Escribir "No se guardado el número dado que ya existe";
 							c2Name<-"";
@@ -80,11 +82,11 @@ Proceso ciclos06
 						Escribir "Escriba el nombre del nuevo contacto";
 						Leer c3Name;
 						Escribir "Escriba el telefono del nuevo contacto";
-						Leer nTem;
+						Leer nTem3;
 						Escribir "Escriba la organización del nuevo contacto";
 						Leer c3Org;
-						Si nTem <> c1Tel y nTem <> c2Tel y nTem <> c3Tel Entonces
-							c3Tel <- nTem;
+						Si nTem3 <> c1Tel y nTem3 <> c2Tel y nTem3 <> c3Tel Entonces
+							c3Tel <- nTem3;
 						SiNo
 							Escribir "No se guardado el número dado que ya existe";
 							c3Name<-"";
@@ -101,10 +103,10 @@ Proceso ciclos06
 					Escribir "El contacto ", c1Name, " tiene el número: ", c1Tel, " y pertenece a: ", c1Org;
 				FinSi
 				Si busq == c2Name Entonces
-					Escribir "El contacto ", c2Name, " tiene el número: ", c1Tel, " y pertenece a: ", c2Org;
+					Escribir "El contacto ", c2Name, " tiene el número: ", c2Tel, " y pertenece a: ", c2Org;
 				FinSi
 				Si busq == c3Name Entonces
-					Escribir "El contacto ", c3Name, " tiene el número: ", c1Tel, " y pertenece a: ", c3Org;
+					Escribir "El contacto ", c3Name, " tiene el número: ", c3Tel, " y pertenece a: ", c3Org;
 				FinSi
 				Si busq <> c1Name y busq <> c2Name y busq <> c3Name Entonces
 					Escribir "Contacto no existe";
